@@ -1,4 +1,4 @@
-(function() {
+(function(){
 
   'use strict';
 
@@ -38,28 +38,18 @@
         activeIndex = index;
       }
     };
-
-
     return {
       init: init,
       goToTab: goToTab
     };
-
   };
-
- 
   window.tabs = tabs;
-
 })();
-
-
     var myTabs = tabs({
-    el: '#tabs',
-    tabNavigationLinks: '.tabs-nav__link',
-    tabContentContainers: '.tab'
-
+     el: '#tabs',
+     tabNavigationLinks: '.tabs-nav__link',
+     tabContentContainers: '.tab'
   });
-  document.getElementsByClassName('tabs-nav__link')[0].className+=" is-active";
-  document.getElementsByClassName('tab')[0].className+=" is-active";
-
+  document.getElementsByClassName('tabs-nav__link')[0].className+=' is-active';
+  document.getElementsByClassName('tab')[0].className+=' is-active';
   myTabs.init();
