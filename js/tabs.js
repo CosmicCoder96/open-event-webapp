@@ -3,7 +3,7 @@
   'use strict';
 
   var tabs = function(options) {
-
+    var i;
     var el = document.querySelector(options.el);
     var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
     var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
@@ -15,20 +15,12 @@
         initCalled = true;
         el.classList.remove('no-js');
 
-        for (var i = 0; i < tabNavigationLinks.length; i++) {
+        for (i = 0; i < tabNavigationLinks.length; i++) {
           var link = tabNavigationLinks[i];
           handleClick(link, i);
         }
       }
     };
-
-    var handleClick = function(link, index) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        goToTab(index);
-      });
-    };
-
     var goToTab = function(index) {
       if (index !== activeIndex && index >= 0 && index <= tabNavigationLinks.length) {
         tabNavigationLinks[activeIndex].classList.remove('is-active');
@@ -38,18 +30,24 @@
         activeIndex = index;
       }
     };
+    var handleClick = function(link, index) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        goToTab(index);
+      });
+    };
     return {
       init: init,
       goToTab: goToTab
     };
   };
   window.tabs = tabs;
-})();
-    var myTabs = tabs({
+})()
+var myTabs = tabs({
      el: '#tabs',
      tabNavigationLinks: '.tabs-nav__link',
      tabContentContainers: '.tab'
-  });
-  document.getElementsByClassName('tabs-nav__link')[0].className+=' is-active';
-  document.getElementsByClassName('tab')[0].className+=' is-active';
-  myTabs.init();
+ });
+document.getElementsByClassName('tabs-nav__link')[0].className+=' is-active';
+document.getElementsByClassName('tab')[0].className+=' is-active';
+myTabs.init();
