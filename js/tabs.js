@@ -4,6 +4,7 @@
 
     var tabs = function(options) {
 
+        var i;
         var el = document.querySelector(options.el);
         var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
         var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
@@ -26,6 +27,8 @@
             });
         };
         var init = function() {
+            var link;
+            
             if (!initCalled) {
                 initCalled = true;
                 el.classList.remove('no-js');
