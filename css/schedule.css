@@ -936,6 +936,9 @@ a {
   right: 0;
   top: 0; }
 
+.tabs {
+  margin-left: -15px; }
+
 .tabs-nav {
   display: flex;
   list-style: none;
@@ -955,7 +958,7 @@ a {
   .tabs-nav__link:hover {
     color: #777; }
   .tabs-nav__link.is-active {
-    color: #2196F3;
+    color: rgba(22, 22, 22, 0.99);
     background-color: #e7e7e7; }
   .tabs-nav__link i, .tabs-nav__link span {
     margin: 0;
@@ -982,7 +985,7 @@ a {
 
 .tab__content {
   padding: 1.5rem;
-  color: #e52d27;
+  color: rgba(22, 22, 22, 0.99);
   overflow: auto; }
   .tab__content a {
     margin-right: 1rem;
@@ -991,11 +994,13 @@ a {
     .tab__content a:before {
       content: '\00B7';
       margin-right: 0.5rem; }
+    .tab__content a:hover {
+      color: rgba(22, 22, 22, 0.99); }
 
 @media only screen and (max-width: 420px) {
   .tab__content {
     padding: 1.5rem;
-    color: #e52d27;
+    color: rgba(22, 22, 22, 0.99);
     white-space: nowrap;
     max-height: 40px;
     overflow-x: scroll; } }
