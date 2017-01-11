@@ -1,16 +1,16 @@
 
-(function () {
+(function() {
   'use strict';
   var tabs = function(options) {
-    
     var i;
+    var goToTab, handleClick, init;
     var el = document.querySelector(options.el);
     var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
     var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
     var activeIndex = 0;
     var initCalled = false;
 
-    var goToTab = function(index) {
+    goToTab = function(index) {
       if (index !== activeIndex && index >= 0 && index <= tabNavigationLinks.length) {
         tabNavigationLinks[activeIndex].classList.remove('is-active');
         tabNavigationLinks[index].classList.add('is-active');
@@ -19,13 +19,13 @@
         activeIndex = index;
       }
     };
-    var handleClick = function(link, index) {
-      link.addEventListener('click', function (e) {
+    handleClick = function(link, index) {
+      link.addEventListener('click', function(e) {
         e.preventDefault();
         goToTab(index);
       });
     };
-    var init = function() {
+    init = function() {
       var link;
 
       if (!initCalled) {
@@ -42,11 +42,12 @@
       init: init,
       goToTab: goToTab
     };
-
   };
   window.tabs = tabs;
 })();
-var myTabs = tabs({
+var myTabs;
+
+myTabs = tabs({
   el: '#tabs',
   tabNavigationLinks: '.tabs-nav__link',
   tabContentContainers: '.tab'
