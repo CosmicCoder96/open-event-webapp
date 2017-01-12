@@ -946,11 +946,11 @@ a {
   padding: 0; }
 
 .tabs-nav-link {
+  background-color: #838282;
+  color: #fff;
   flex: 1;
   margin-right: 4px;
   padding: 12px;
-  color: #fff;
-  background-color: #838282;
   text-align: center;
   transition: color 0.3s; }
   .tabs-nav-link:last-child {
@@ -958,12 +958,12 @@ a {
   .tabs-nav-link:hover {
     color: #e6e6e6; }
   .tabs-nav-link.is-active {
-    color: rgba(22, 22, 22, 0.99);
-    background-color: #e7e7e7; }
+    background-color: #e7e7e7;
+    color: rgba(22, 22, 22, 0.99); }
   .tabs-nav-link i, .tabs-nav-link span {
+    line-height: 1;
     margin: 0;
-    padding: 0;
-    line-height: 1; }
+    padding: 0; }
   .tabs-nav-link i {
     font-size: 18px; }
   .tabs-nav-link span {
