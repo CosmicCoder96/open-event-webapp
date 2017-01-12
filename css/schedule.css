@@ -35,7 +35,7 @@ a {
   max-width: 110px; }
 
 .navbar-default {
-  background-color: #aab1b1;
+  background-color: rgba(255, 255, 255, 0.8);
   border-color: #e7e7e7; }
   .navbar-default .navbar-nav > li > a {
     color: #000;
@@ -956,7 +956,7 @@ a {
   .tabs-nav__link:last-child {
     margin-right: 0; }
   .tabs-nav__link:hover {
-    color: #777; }
+    color: #e6e6e6; }
   .tabs-nav__link.is-active {
     color: rgba(22, 22, 22, 0.99);
     background-color: #e7e7e7; }
