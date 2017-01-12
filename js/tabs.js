@@ -1,6 +1,5 @@
-var tabs, i, myTabs;
-
 'use strict';
+var tabs, i, myTabs;
 
 tabs = function(options) {
   var goToTab, handleClick, init;
@@ -46,9 +45,9 @@ tabs = function(options) {
 window.tabs = tabs;
 myTabs = tabs({
   el: '#tabs',
-  tabNavigationLinks: '.tabs-nav__link',
+  tabNavigationLinks: '.tabs-nav-link',
   tabContentContainers: '.tab'
 });
-document.getElementsByClassName('tabs-nav__link')[0].className += ' is-active';
+document.getElementsByClassName('tabs-nav-link')[0].className += ' is-active';
 document.getElementsByClassName('tab')[0].className += ' is-active';
 myTabs.init();
