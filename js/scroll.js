@@ -14,8 +14,6 @@
           }
         }
       });
-    });
-
     $('#down-button').hide();
     $('#down-button').click(function() {
       $('html, body').animate({scrollTop: 0}, 2000);
@@ -28,4 +26,6 @@
       if($(window).scrollTop() === 0) {
         $('#down-button').fadeOut(1000);
       }
+    });  
     });
+      
