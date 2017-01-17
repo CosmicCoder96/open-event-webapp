@@ -16,18 +16,16 @@
       });
     });
 
-var dbtn = 0;
-$('#down-button').hide();
-$('#down-button').click(function() {
-  $('html, body').animate({scrollTop: 0 }, 2000);
-  $('#down-button').fadeOut(1000);
-});
-window.addEventListener('scroll', function() {
-    if(dbtn == 0 && $(window).scrollTop() > 0)
-    {
-      $("#down-button").fadeIn(1000);
-    }
-    if($(window).scrollTop()==0) {
-       $('#down-button').fadeOut(1000);
-    }
-});
+    $('#down-button').hide();
+    $('#down-button').click(function() {
+      $('html, body').animate({scrollTop: 0}, 2000);
+      $('#down-button').fadeOut(1000);
+    });
+    window.addEventListener('scroll', function() {
+        if($(window).scrollTop() > 0) {
+          $("#down-button").fadeIn(1000);
+        }
+        if($(window).scrollTop()==0) {
+           $('#down-button').fadeOut(1000);
+        }
+    });
