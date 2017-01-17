@@ -22,10 +22,10 @@
       $('#down-button').fadeOut(1000);
     });
     window.addEventListener('scroll', function() {
-        if($(window).scrollTop() > 0) {
-          $("#down-button").fadeIn(1000);
-        }
-        if($(window).scrollTop()==0) {
-           $('#down-button').fadeOut(1000);
-        }
+      if($(window).scrollTop() > 0) {
+        $('#down-button').fadeIn(1000);
+      }
+      if($(window).scrollTop() === 0) {
+        $('#down-button').fadeOut(1000);
+      }
     });
