@@ -1017,3 +1017,11 @@ a {
     overflow-x: scroll;
     padding: 1.5rem;
     white-space: nowrap; } }
+
+#downButton {
+  position: fixed;
+  top: 90%;
+  right: 5%;
+  z-index: 1010;
+  color: gray;
+  font-size: 3em; }
