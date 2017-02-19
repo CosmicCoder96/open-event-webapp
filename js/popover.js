@@ -11,14 +11,20 @@ $(document).ready(function () {
   popbox.addClass('hide');
   if( widthWindow < 768) {
     $(document).on('click','.sizeevent',function (event) {
-      popBox(event);
+      if(popBox.hasClass('hide'))
+        popBox(event);
+      else {
+          popBox.addClass('hide');
+          hidePopbox();
+          hideUnderLine();
+      }
     });
   }
   else {
     headerpop.hover(function (event) {
       popBox(event);
     },function(){
-      popbox.addClass('hide');
+      popBox.addClass('hide');
       hidePopbox();
       hideUnderline();
     });
